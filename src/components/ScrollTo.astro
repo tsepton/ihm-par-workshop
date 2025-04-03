@@ -1,10 +1,10 @@
 ---
-const { mail } = Astro.props;
+const { text, sectionId } = Astro.props;
 ---
 
-<button
+<a
   class="relative group w-fit flex pl-3 pr-3 py-1.5 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white"
-  onclick=`window.location.href='mailto:${mail}';`
+  href=`#${sectionId}`
 >
-  Prendre contact
-</button>
+  {text}
+</a>
