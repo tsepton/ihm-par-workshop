@@ -4,7 +4,8 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: "https://tsepton.github.io",
-  base: "/ihm-par-workshop",
+  site: "https://chat.info.unamur.be",
+  base: "/",
+  trailingSlash: "always",
   integrations: [mdx(), sitemap(), tailwind()],
 });
