@@ -70,18 +70,29 @@ import PageLayout from "@layouts/PageLayout.astro";
       <div class="flex flex-wrap gap-y-5 items-center justify-between">
         <h5 class="font-semibold text-black dark:text-white">Programme</h5>
         <p class="animate text-justify w-full">
-          <ul class="w-full">
-            <li class="flex justify-between"><b>9h</b> Accueil</li>
-            <li class="flex justify-between">
-              <b>9h30</b> Présentation des participants
-            </li>
-            <li class="flex justify-between"><b>12h30</b> Repas</li>
-            <li class="flex justify-between"><b>14h</b> Table de discussion</li>
-            <li class="flex justify-between">
-              <b>16h30</b> Présentation des résultats
-            </li>
-          </ul>
-          <p>Des pauses de 30 minutes sont prévues à 10h30 et 15h30.</p>
+          <div class="w-full">
+            <div class="schedule-item">
+              <span class="time">9h</span> Accueil
+            </div>
+            <div class="schedule-item">
+              <span class="time">9h30</span> Présentation des participants
+            </div>
+            <div class="schedule-item">
+              <span class="time">10h30</span> Pause de 30m
+            </div>
+            <div class="schedule-item">
+              <span class="time">12h30</span> Repas
+            </div>
+            <div class="schedule-item">
+              <span class="time">14h</span>Table de discussion
+            </div>
+            <div class="schedule-item">
+              <span class="time">15h30</span> Pause de 30m
+            </div>
+            <div class="schedule-item">
+              <span class="time">16h30</span> Présentation des résultats
+            </div>
+          </div>
         </p>
       </div>
     </section>
@@ -97,8 +108,9 @@ import PageLayout from "@layouts/PageLayout.astro";
           Formulaire d'inscription
         </a>
         <p class="animate text-justify w-full">
-          Les inscriptions au workshop se font via le formulaire ci-dessus. 
-          Il est impératif de s'inscrire à la conférence IHM 2025, et de compléter le formulaire d'inscription à l'atelier afin de pouvoir y participer.
+          Les inscriptions au workshop se font via le formulaire ci-dessus. Il
+          est impératif de s'inscrire à la conférence IHM 2025, et de compléter
+          le formulaire d'inscription à l'atelier afin de pouvoir y participer.
         </p>
         <p class="animate text-justify w-full">
           Il vous est également possible de soumettre un article de 2 pages
@@ -172,3 +184,21 @@ import PageLayout from "@layouts/PageLayout.astro";
     </section>
   </Container>
 </PageLayout>
+
+<style>
+  .schedule-item {
+    display: flex;
+    justify-content: start;
+    padding: 10px 0;
+  }
+
+  .schedule-item:not(:last-child) {
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .schedule-item .time {
+    font-weight: bold;
+    width: 25%;
+    min-width: fit-content;
+  }
+</style>
