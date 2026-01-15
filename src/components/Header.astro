@@ -3,6 +3,7 @@ import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import { SITE } from "@consts";
 import ScrollTo from "./ScrollTo.astro";
+import Button from "./Button.astro";
 ---
 
 <header>
@@ -29,7 +30,8 @@ import ScrollTo from "./ScrollTo.astro";
         <Link href="/projects">
           projects
         </Link> -->
-        <ScrollTo text="Inscription" sectionId="participation" />
+        <!-- <ScrollTo text="Inscription" sectionId="participation" /> -->
+        <Button href="result.pdf">Télécharger les résultats</Button>
       </nav>
     </div>
   </Container>
